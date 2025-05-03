@@ -37,6 +37,6 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         script: |
           sudo docker pull pranav1209/testrepo:latest
-          sudo docker stop web-app || true
-          sudo docker rm web-app || true
-          sudo docker run -d --name web-app -p 3005:3000 pranav1209/testrepo:latest
+          sudo docker stop my-web-app || true
+          sudo docker rm my-web-app || true
+          sudo docker run -d --name my-web-app -p 3005:3000 pranav1209/testrepo:latest
